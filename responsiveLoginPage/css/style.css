@@ -1,0 +1,87 @@
+:root{
+    --bg-color  :#36e6fe;
+    --main-color:#536573;
+}
+*{    
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .container{
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+}
+
+body .container .left{
+    padding: 3rem 4.5rem;
+    background-color: var(--main-color);
+}
+
+body .container .right{
+    padding: 4.5rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body .container .right form{
+    display: flex;
+    flex-direction: column;
+}
+body .container .right form input:not(:last-child){
+    margin-bottom: 2.5rem;
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    position: relative;
+    padding: .75rem 0;
+    color: var(--main-color);
+    font-weight: 600;
+}
+body .container .right form input:last-child{
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 600;
+    padding: 1rem 0;
+    border-radius: 1rem;
+}
+
+body .container .right form input::placeholder{
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+body .container .right .links{
+    display: flex;
+    gap: 1rem;
+}
+
+body .container .right .links a{
+    color: var(--main-color);
+}
+
+@media (max-width:750px) {
+    body .container .left{
+        display: none;
+    }
+    body .container .right{
+        gap: 2rem;
+    }
+}
